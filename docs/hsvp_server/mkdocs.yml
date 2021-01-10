@@ -1,0 +1,20 @@
+site_name: HSVP_SERVER
+nav:
+    - Home: index.md
+    - User: user.md
+    - Bidder: bidder.md
+    - Address: address.md
+    - Seller: seller.md
+    - Bid: bid.md
+    - Joint_Holder: joint_holder.md
+    - Bank_Detail: bank_detail.md
+    - Document: document.md
+    - Auction: auction.md
+    - EMD: emd.md
+    - Round: round.md
+    - Round_Bid: round_bid.md
+    - User Document: user_document.md
+    - Item: item.md
+    - Auction_Document: auction_document.md
+    - About: about.md
+theme: readthedocs

@@ -1,0 +1,1575 @@
+{
+	"info": {
+		"_postman_id": "56e72b00-d608-41be-81a7-befcb8ba7fa2",
+		"name": "hsvp_server",
+		"description": "API for hsvp_server project.\n\nUse the endpoints in the **hsvp_server API ** to retrieve the User,Auction information for upcoming ,last and current Auctions.\n\nThe API base URL is 'http://127.0.0.1:8000/api/' with paths for retrieving  the following information:\n\n* seller\n* user\n* bidder\n* document\n* auction-detail\n* item\n* address",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Patch Document Detail",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"doc_type\": \"pdf\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/document/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"document",
+						"2",
+						""
+					]
+				},
+				"description": "using this you can partially update document detail."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Biddder Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/bidder/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bidder",
+						""
+					]
+				},
+				"description": "using this link you can get all bidder infortion and refund account detail."
+			},
+			"response": []
+		},
+		{
+			"name": "Post Biddder Detail",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"user\": {\n            \"first_name\": \"Alex\",\n            \"last_name\": \"Hales\"\n          \n        },\n         \"refund_account\": {\n         }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/bidder/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bidder",
+						"2",
+						""
+					]
+				},
+				"description": "using this you can post data of bidder as well as primary account."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Seller Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/seller/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Seller Detail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n    {\n        \"user\": {\n            \"username\": \"rishi4\",\n            \"email\": \"rishi34344@gmail.com\",\n            \"contact_number\": \"+919823992389\",\n            \"first_name\": \"rishikesh\",\n            \"last_name\": \"yadav\",\n            \"father_first_name\": \"rishikesh\",\n            \"father_last_name\": \"yadav\",\n            \"gst_no\": \"549349\",\n            \"otp\": \"9349\",\n            \"otp_sent_at\": \"09:26\"\n        },\n        \"primary_account\": {\n            \"name\": \"rishikesh\",\n            \"bank_name\": \"sbi\",\n            \"account_number\": \"989599494595490\",\n            \"ifs\": \"jeni9349\",\n            \"branch\": \"ald\"\n        }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/seller/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						""
+					]
+				},
+				"description": "you can create new user(seller) with his/her primary account."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Address Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/address/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"address",
+						""
+					]
+				},
+				"description": "this api work on address opration."
+			},
+			"response": []
+		},
+		{
+			"name": "Post Address Detail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n        \"user\":2,\n        \"type\": \"home\",\n        \"line_1\": \"katka jhunsi allahabad\",\n        \"line_2\": \"katka jhunsi allahabad\",\n        \"pincode\": \"211020\",\n        \"state\": \"uttar pradesh\",\n        \"city\": \"allahabad\",\n        \"country\": \"india\",\n        \"contact_number\": \"+917390049066\",\n        \"notes\": \"we are looking for relocate.\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/address/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"address",
+						""
+					]
+				},
+				"description": "post address credentials of user."
+			},
+			"response": []
+		},
+		{
+			"name": "Patch Address Detail",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n        \"city\": \"jaipur\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/address/6/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"address",
+						"6",
+						""
+					]
+				},
+				"description": "partial updation of address."
+			},
+			"response": []
+		},
+		{
+			"name": "Get auction_detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auction-detail/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auction-detail",
+						""
+					]
+				},
+				"description": "information about item which is going to be auctioned."
+			},
+			"response": []
+		},
+		{
+			"name": "Post auction_detail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n    \"name\": \"parking lot\",\n    \"description\": \"sri lanka\",\n    \"quantity\": 2\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auction-detail/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auction-detail",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch item detail",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n    \n        \"description\": \"hello world\",\n        \"image_url\": \"gta.jpeg\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/item/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"item",
+						"1",
+						""
+					]
+				},
+				"description": "partially update the item detail ."
+			},
+			"response": []
+		},
+		{
+			"name": "Get EMD Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/emd/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"emd",
+						""
+					]
+				},
+				"description": "can get EMD detail using this"
+			},
+			"response": []
+		},
+		{
+			"name": "Post EMD Detail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"auction\": 1,\n        \"seller\": 3,\n        \"quantity\": 2,\n        \"processing_fees\": \"4000.00\",\n        \"total_amount\": \"15000.00\",\n        \"payment_mode\": \"O\",\n        \"status\": \"S\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/emd/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"emd",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Bid Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/bid/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bid",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Bid Detail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"bidder\": 1,\n        \"auction\":2,\n        \"price\": \"2000000.00\",\n        \"placed_at\": \"2020-10-29\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/bid/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bid",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Joint_holder Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/joint-holder",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"joint-holder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Round Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/round/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"round",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Round Detail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"auction\": 1,\n        \"h1_payment\": 1,\n        \"starts_at\": \"2020-10-31T11:09:24+0000\",\n        \"ends_at\": \"2020-10-31T11:09:27+0000\",\n        \"base_price\": \"40000.00\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/round/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"round",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch Round Detail",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"auction\": 1,\n        \"h1_payment\": 1,\n        \"starts_at\": \"2020-10-31T11:09:24+0000\",\n        \"ends_at\": \"2020-10-31T11:09:27+0000\",\n        \"base_price\": \"50000.00\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/round/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"round",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Joint-holder Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"auction\": 1,\n        \"h1_payment\": 1,\n        \"starts_at\": \"2020-10-31T11:09:24+0000\",\n        \"ends_at\": \"2020-10-31T11:09:27+0000\",\n        \"base_price\": \"50000.00\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/joint-holder/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"joint-holder",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Joint-holder Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/joint-holder/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"joint-holder",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User-document Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user-document/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user-document",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Item Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/item/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"item",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch Item Detail",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"description\": \"it's not affordable to you.\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/item/15/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"item",
+						"15",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Auction-Document Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"description\": \"it's not affordable to you.\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auction-document/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auction-document",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Auction-Document Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auction-document/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auction-document",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Auction-Document Detail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"auction\":2,\n    \"document\":2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auction-document/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auction-document",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch Auction-Document Detail",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"document\":3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auction-document/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auction-document",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post User Detail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n        \"username\": \"root1\",\n        \"email\": \"root@gamil.com\",\n        \"contact_number\": \"+919923992388\",\n        \"first_name\": \"root\",\n        \"last_name\": \"root\",\n        \"father_first_name\": \"root\",\n        \"father_last_name\": \"root\",\n        \"gst_no\": \"37893937\",\n        \"otp\": \"3422\",\n        \"otp_sent_at\": \"09:26\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch User Detail",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n\n        \"father_first_name\": \"root2\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/8/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"8",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Bank-detail Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/bank-detail",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bank-detail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Bank-detail Detail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"name\": \"root\",\n        \"bank_name\": \"HDFC\",\n        \"account_number\": \"336749837334\",\n        \"ifs\": \"hdfc4849\",\n        \"branch\": \"jhunsi\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/bank-detail/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bank-detail",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch Bank-detail Detail",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"branch\": \"jaipur\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/bank-detail/7/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bank-detail",
+						"7",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Document Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/document/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"document",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Document Detail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "adhar card",
+							"type": "text"
+						},
+						{
+							"key": "doc_type",
+							"value": "jpg",
+							"type": "text"
+						},
+						{
+							"key": "file_url_1",
+							"type": "file",
+							"src": "/home/rishikesh/Downloads/3f8c3ad509f0f5711ed2e025bdf2452d.jpg"
+						},
+						{
+							"key": "file_url_2",
+							"type": "file",
+							"src": "/home/rishikesh/Downloads/index.jpeg"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/document/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"document",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch Document Detail",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n    {\n\n        \"file_url_2\": \"root2.pdf\"\n    }\n  ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/document/4/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"document",
+						"4",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Auction Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n  ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auction/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auction",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post joint-holder Detail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"bidder\":1,\n        \"user\": {\n                \"username\": \"roooot\",\n                \"email\": \"rooot@gmail.com\",\n                \"contact_number\": \"+919723992054\",\n                \"first_name\": \"root\",\n                \"last_name\": \"root\",\n                \"father_first_name\": \"root\",\n                \"father_last_name\": \"root\",\n                \"gst_no\": \"37893937\",\n                \"otp\": \"3422\",\n                \"otp_sent_at\": \"09:26\"\n        },\n        \"refund_account\": {\n                \"name\": \"rooot\",\n                \"bank_name\": \"HDFC\",\n                \"account_number\": \"336749037059\",\n                \"ifs\": \"hdfc1903\",\n                \"branch\": \"jhunsi\"\n            }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/joint-holder/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"joint-holder",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch joint-holder Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"username\": \"roooot\",\n        \"email\": \"rooot@gmail.com\",\n        \"contact_number\": \"+919723992054\",\n        \"first_name\": \"roooot\",\n        \"last_name\": \"roooot\"\n   \n    },\n    \"refund_account\": {\n        \"bank_name\": \"HDFC\",\n        \"account_number\": \"336749037059\",\n        \"branch\": \"jaipur\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/joint-holder/3/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"joint-holder",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch joint-holder Detail",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"username\":\"root0\",\n        \"first_name\": \"roooot\",\n        \"last_name\": \"roooot\"\n     \n    },\n    \"refund_account\": {\n        \"name\":\"rooooot\",\n        \"bank_name\": \"HDFC\",\n        \"account_number\": \"336749007059\",\n        \"ifs\": \"hdfc1903\",\n        \"branch\": \"jaipur\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/joint-holder/3/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"joint-holder",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch new auction ",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"seller\":3,\n        \"document\": {\n            \"name\": \"pan card\",\n            \"doc_type\": \"pan card\",\n            \"file_url_1\": \"pancard2.jpg\",\n            \"file_url_2\": \"pancard2.png\"\n        },\n        \"details\": {\n            \"name\": \"office\",\n            \"description\": \"sri lanka\",\n            \"quantity\": 2\n        },\n        \"name\": \"sri lanka\",\n        \"description\": \"site available in sri lanka\",\n        \"starts_at\": \"2020-11-19T18:20:10+0000\",\n        \"ends_at\": \"2020-11-19T18:20:16+0000\",\n        \"no_of_rounds\": 3,\n        \"base_price\": \"90000.00\",\n        \"registration_time_starts_at\": \"2020-11-19T18:20:25+0000\",\n        \"registration_time_ends_at\": \"2020-11-19T18:20:31+0000\",\n        \"emd_amount\": \"2365.00\",\n        \"h1_payment_percent\": \"48.00\",\n        \"h1_payment_end_date\": \"2020-11-19T18:21:48+0000\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auction/30/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auction",
+						"30",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post New Auction Detail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"seller\": 2,\n        \"document\": {\n            \"name\": \"adhar card\",\n            \"doc_type\": \"pdf\",\n            \"file_url_1\": \"hello.jpeg\",\n            \"file_url_2\": \"lol.jpeg\"\n        },\n        \"details\": {\n            \"name\": \"plot\",\n            \"description\": \"this item is too cheap\",\n            \"quantity\": 2\n        },\n        \"name\": \"root\",\n        \"description\": \"root\",\n        \"starts_at\": \"2020-11-19T17:10:38+0000\",\n        \"ends_at\": \"2020-11-19T17:10:43+0000\",\n        \"no_of_rounds\": 3,\n        \"base_price\": \"23232.00\",\n        \"registration_time_starts_at\": \"2020-11-19T17:10:52+0000\",\n        \"registration_time_ends_at\": \"2020-11-19T17:10:54+0000\",\n        \"emd_amount\": \"2323.00\",\n        \"h1_payment_percent\": \"23.00\",\n        \"h1_payment_end_date\": \"2020-11-19T17:11:08+0000\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auction/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auction",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post item detail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "jfjj",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "jjje",
+							"type": "text"
+						},
+						{
+							"key": "image_url",
+							"type": "file",
+							"src": "/home/rishikesh/Downloads/3f8c3ad509f0f5711ed2e025bdf2452d.jpg"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/item/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"item",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post auction detail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{       \"auction_items\":\n        [{\n        \"name\": \"plot4\",\n        \"description\": \"600*400 plot in hydrabad\",\n        \"image\":\"rishi.jpeg\"\n        },\n        {\n        \"name\": \"plot1\",\n        \"description\": \"600*400 plot in hydrabad\",\n        \"image\":\"rishi.jpeg\"\n        }],\n        \"name\":\"ddm\",\n        \"description\":\"djdjd\",\n        \"quantity\":3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/aution-detail/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"aution-detail",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

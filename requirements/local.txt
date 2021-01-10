@@ -1,0 +1,7 @@
+-r base.txt
+
+django-extensions==3.0.9
+ipdb==0.13.3
+ipython==7.16.1
+ipython-genutils==0.2.0
+jedi==0.17.2
